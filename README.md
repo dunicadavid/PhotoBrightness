@@ -2,8 +2,8 @@
 [EN]
 
 This is a Java program which modifies the luminosity of a picture. It contains a producer-consumer model of parallelization. Producer method is used for extracting the pixels from
-the image and sending a quarter of the resulted matrix to consumer , while the consumer method is used to convert the pixels into RGB values which are modified by adding or lowering
-its value. These 2 are connected using a buffer class, which is used as a shared memory, so it contains syncronasation (wait + notify) (for preventing the critical zone to be 
+the image then sending a quarter of the resulted matrix to consumer; the consumer method is used to convert the pixels into RGB values which are modified by adding or lowering
+its value. These 2 are connected using a buffer class, which is used as a shared memory, so it contains syncronasation (wait + notify) (preventing the critical zone to be 
 accessed by both threads at the same time).
 The algorithm requires 4 parameters which can be read from keyboard or command line: 
   - the path to the folder where is the image
